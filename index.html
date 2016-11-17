@@ -1,17 +1,57 @@
 <html>
 	<head>
         <title>sensHealth</title>
-        <link rel="stylesheet" type="text/css" href="/style.css">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
     </head>
 	<body>
-        <nav id="menu">
-            <ul>
-                <li><a href="">Inicio</a></li>
-                <li><a href="">Mis datos</a></li>
-                <li><a href="">Cerrar sesion</a></li>
-            </ul>
-        </nav>
-		<div id="Bienvenida"></div>
-        <div id=""
+        <header class="menu">
+            <nav id="menu">
+                <ul>
+                    <li><a href="#bienvenida">Inicio</a></li>
+                    <li><a href="#acerca">Acerca de</a></li>
+                    <li><a href="#comentarios">Comentarios</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                    <li><a href="#sesion">Inicio de Sesión</a></li>
+                </ul>
+            </nav>
+        </header>
+		<div id="bienvenida">
+            <section class="contenido">
+                <h1>Bienvenido</h1>
+                <p id="parra-bienvenida">SensHealth es la nueva solucion que pretende apoyar a sistema de emergencias medicas actual, mediante el monitoreo en tiempo real de los signos vitales de cada paciente.</p>
+            </section>
+        </div>
+        <div id="acerca">
+            <section class="contenido">
+                <h1>¿Que es senseHealth?</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam, adipisci ut dolorem cumque iure fugit nisi soluta placeat numquam eligendi magni rerum eaque nulla molestiae cupiditate modi laborum fuga doloribus!</p>
+            </section>
+        </div>
+        <div id="comentarios">
+            <section class="contenido">
+                <h1>Comentarios</h1>
+                <p>Lo que algunos usuarios comentan...</p>
+            </section>
+        </div>
+        <div id="contacto">
+            <section class="contenido">
+                <h1>Contactanos</h1>
+                <form class="contacto">
+                    <label>Nombre: </label>
+                    <input type="text" id="contacto-nombre">
+                    <label>Correo: </label>
+                    <input type="text" id="contacto-correo"><br>
+                    <label>Comentarios: </label>
+                    <input type="text" id="contacto-comentario">
+                </form>
+            </section>
+        </div>
+        <div id="sesion">
+            <section class="contenido">
+                <h1>Inicia Sesión</h1>
+                <p>Si ya estas registrado puedes iniciar sesion aqui</p>
+                <input type="button" name="Iniciar Sesion" value="Iniciar Sesion" >
+            </section>
+        </div>
 	</body>
 </html>

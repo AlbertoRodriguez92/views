@@ -1,0 +1,104 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+p {
+    margin-bottom: 20px;
+}
+
+header {
+  background: rgba(f,f,f,0.9);
+  width: 100%;
+  position: fixed;
+  z-index: 100;
+}
+body{
+    background-color: white;
+    font-family: sans-serif;
+    color: blue;
+}
+
+legend{
+    font-size: 25px;
+    font-size-adjust: auto;
+}
+
+/*#menu ul{
+    list-style-type: none;
+   text-align: center;
+}
+
+#menu li{
+   display: inline;
+   text-align: center;
+   margin: 0 30px 0 0;
+}
+
+#menu li a {
+   padding: 2px 7px 2px 7px;
+   color: #666;
+   background-color: #eeeeee;
+   border: 1px solid #ccc;
+   text-decoration: none;
+}
+
+#menu li a:hover{
+   background-color: #333333;
+   color: #ffffff;
+}*/
+nav {
+  float: left; /* Desplazamos el nav hacia la izquierda */
+}
+
+nav ul {
+  list-style: none;
+  overflow: hidden; /* Limpiamos errores de float */
+}
+
+nav ul li {
+  float: left;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+}
+
+nav ul li a {
+  display: block; /* Convertimos los elementos a en elementos bloque para manipular el padding */
+  padding: 20px;
+  color: #000;
+  text-decoration: none;
+}
+
+nav ul li:hover {
+  background: #cccccc;
+}
+.contenido {
+    padding-top: 80px;
+    margin: 0 50px;
+}
+.menu {
+  width: 100%;
+  margin: auto;
+  overflow:hidden;
+}
+
+#bienvenida{
+    background-color: orange;
+    height: 90%;
+}
+#acerca{
+    background-color: burlywood;
+    height: 90%;
+}
+#comentarios{
+    background-color: aquamarine;
+    height: 90%;
+}
+#contacto{
+    background-color: bisque;
+    height: 90%;
+}
+#sesion{
+    background-color: cyan;
+    height: 90%;
+}
