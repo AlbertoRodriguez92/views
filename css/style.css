@@ -4,7 +4,9 @@
 }
 
 p {
+    font-size: 24px;
     margin-bottom: 20px;
+    margin-top: 40px;
 }
 
 header {
@@ -16,37 +18,18 @@ header {
 body{
     background-color: white;
     font-family: sans-serif;
-    color: blue;
+    color: black;
 }
 
+h1{
+    font-size: 42px;
+    text-align: center;
+}
 legend{
     font-size: 25px;
     font-size-adjust: auto;
 }
 
-/*#menu ul{
-    list-style-type: none;
-   text-align: center;
-}
-
-#menu li{
-   display: inline;
-   text-align: center;
-   margin: 0 30px 0 0;
-}
-
-#menu li a {
-   padding: 2px 7px 2px 7px;
-   color: #666;
-   background-color: #eeeeee;
-   border: 1px solid #ccc;
-   text-decoration: none;
-}
-
-#menu li a:hover{
-   background-color: #333333;
-   color: #ffffff;
-}*/
 nav {
   float: left; /* Desplazamos el nav hacia la izquierda */
 }
@@ -83,22 +66,37 @@ nav ul li:hover {
 }
 
 #bienvenida{
-    background-color: orange;
+/*    background-color: orange;*/
+    background-image: url(../images/encabezado_atencion_medica.jpg);
+    opacity: 0.4;
+    background-size: cover;
     height: 90%;
 }
 #acerca{
-    background-color: burlywood;
+/*    background-color: burlywood;*/
+    background-image: url(../images/2.jpg);
+    opacity: 0.4;
+    background-size: cover;
     height: 90%;
 }
 #comentarios{
-    background-color: aquamarine;
+/*    background-color: aquamarine;*/
+    background-image: url(../images/equipment--doctor.jpg);
+    opacity: 0.4;
+    background-size: cover;
     height: 90%;
 }
 #contacto{
-    background-color: bisque;
+/*    background-color: bisque;*/
+    background-image: url(../images/logros-salud-2009.jpg);
+    opacity: 0.4;
+    background-size: cover;
     height: 90%;
 }
 #sesion{
-    background-color: cyan;
+/*    background-color: cyan;*/
+    background-image: url(../images/coberturas-seguros-de-salud.jpg);
+    opacity: 0.4;
+    background-size: cover;
     height: 90%;
 }
