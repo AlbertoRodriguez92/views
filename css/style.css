@@ -49,6 +49,9 @@ nav ul li a {
   display: block; /* Convertimos los elementos a en elementos bloque para manipular el padding */
   padding: 20px;
   color: #000;
+  font-family: sans-serif;
+  font-size: 20px;
+  font-weight: 600;
   text-decoration: none;
 }
 
@@ -58,6 +61,8 @@ nav ul li:hover {
 .contenido {
     padding-top: 80px;
     margin: 0 50px;
+    color: black;
+    z-index: 10;
 }
 .menu {
   width: 100%;
@@ -67,36 +72,77 @@ nav ul li:hover {
 
 #bienvenida{
 /*    background-color: orange;*/
-    background-image: url(../images/encabezado_atencion_medica.jpg);
-    opacity: 0.4;
+/*    background-image: url(../images/encabezado_atencion_medica.jpg);*/
+    background-repeat: no-repeat;
     background-size: cover;
     height: 90%;
 }
+
 #acerca{
 /*    background-color: burlywood;*/
-    background-image: url(../images/2.jpg);
-    opacity: 0.4;
+/*    background-image: url(../images/2.jpg);*/
+    background-repeat: no-repeat;
     background-size: cover;
     height: 90%;
 }
 #comentarios{
 /*    background-color: aquamarine;*/
-    background-image: url(../images/equipment--doctor.jpg);
-    opacity: 0.4;
+/*    background-image: url(../images/equipment--doctor.jpg);*/
+    background-repeat: no-repeat;
     background-size: cover;
     height: 90%;
 }
 #contacto{
 /*    background-color: bisque;*/
-    background-image: url(../images/logros-salud-2009.jpg);
-    opacity: 0.4;
+/*    background-image: url(../images/logros-salud-2009.jpg);*/
+    background-repeat: no-repeat;
     background-size: cover;
     height: 90%;
 }
+input{
+    margin-top: 20px;
+    width: 400px;
+}
+#contacto-comentario{
+    width: 600px;
+    height: 250px;
+}
 #sesion{
 /*    background-color: cyan;*/
-    background-image: url(../images/coberturas-seguros-de-salud.jpg);
-    opacity: 0.4;
+/*    background-image: url(../images/coberturas-seguros-de-salud.jpg);*/
+    background-repeat: no-repeat;
     background-size: cover;
     height: 90%;
+}
+img{
+    position: absolute;
+    opacity: .4;
+    z-index: -10;
+    width: 100%;
+    height: 90%;
+}
+button{
+    height: 30px;
+    width: auto;
+    margin-top: 20px;
+    float: right;
+    margin-right: 40px;
+}
+#ini-sesion{
+    height: 60px;
+    width: auto;
+    background: #222222;
+    font-family: sans-serif;
+    font-size: 24px;
+    color: white;
+    margin-top: 60px;
+    margin-left: 45%;
+}
+#ini-sesion:hover{
+    background: #ffffff;
+    color: black;
+}
+
+#acerca-parraghraph{
+    background-color: aliceblue;
 }
