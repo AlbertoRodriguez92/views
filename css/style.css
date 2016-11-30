@@ -4,6 +4,7 @@
 }
 
 p {
+	background: rgba(ff,ff,ff,0.5);
     font-size: 24px;
     margin-bottom: 20px;
     margin-top: 40px;
@@ -58,43 +59,59 @@ nav ul li a {
 nav ul li:hover {
   background: #cccccc;
 }
+section{
+    z-index: 20;
+}
 .contenido {
     padding-top: 80px;
     margin: 0 50px;
     color: black;
+	position: absolute;
     z-index: 10;
+}
+.contenido p{
+	background-color: white;
+	opacity: 0.7;
+	border-radius: 10px;
 }
 .menu {
   width: 100%;
   margin: auto;
-  overflow:hidden;
+  overflow: hidden;
 }
-
+/*#fondo-bienvenida{
+    background-image: url(../images/encabezado_atencion_medica.jpg);
+    opacity: 0.4;
+    background-size: cover;
+    height: 90%;
+    z-index: -10;
+}*/
 #bienvenida{
 /*    background-color: orange;*/
-/*    background-image: url(../images/encabezado_atencion_medica.jpg);*/
+    background-image: url(../images/encabezado_atencion_medica.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     height: 90%;
+
 }
 
 #acerca{
 /*    background-color: burlywood;*/
-/*    background-image: url(../images/2.jpg);*/
+    background-image: url(../images/2.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     height: 90%;
 }
 #comentarios{
 /*    background-color: aquamarine;*/
-/*    background-image: url(../images/equipment--doctor.jpg);*/
+    background-image: url(../images/equipment--doctor.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     height: 90%;
 }
 #contacto{
 /*    background-color: bisque;*/
-/*    background-image: url(../images/logros-salud-2009.jpg);*/
+    background-image: url(../images/logros-salud-2009.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     height: 90%;
@@ -109,7 +126,7 @@ input{
 }
 #sesion{
 /*    background-color: cyan;*/
-/*    background-image: url(../images/coberturas-seguros-de-salud.jpg);*/
+    background-image: url(../images/coberturas-seguros-de-salud.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     height: 90%;
@@ -129,14 +146,16 @@ button{
     margin-right: 40px;
 }
 #ini-sesion{
-    height: 60px;
-    width: auto;
+    height: 100pxpx;
+    width: 400px;
     background: #222222;
     font-family: sans-serif;
-    font-size: 24px;
-    color: white;
-    margin-top: 60px;
+    font-size: 30px;
+    color: #eeeeee;
+    margin-top: 100px;
     margin-left: 45%;
+	border-radius: 12px;
+	text-decoration: none;
 }
 #ini-sesion:hover{
     background: #ffffff;
@@ -145,4 +164,11 @@ button{
 
 #acerca-parraghraph{
     background-color: aliceblue;
+}
+#scrollUp {
+  bottom: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  background: #555;
+  color: #fff;
 }
