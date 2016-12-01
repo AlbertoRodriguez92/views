@@ -1,0 +1,27 @@
+<html>
+	<head>
+		<link type="text/css" href="css/style.css" rel="stylesheet">
+	</head>
+	<body>
+		<label>Nombre de Usuario: </label>
+		<input id="usuario" type="text">
+		<label>Contraseña: </label>
+		<input id="contrasena" type="password">
+		<button value="Iniciar sesion" onclick="enviaDatos();" >Enviar Datos</button>
+	</body>
+	<script type="application/javascript">
+	function enviaDatos(){
+		var user = document.getElementById("usuario").value;
+		var pass = document.getElementById("contrasena").value;
+
+		var xmlhttp = new XMLHttpRequest();
+        xmlhttp.open("POST", "http://192.168.1.88:8080/login");
+        xmlhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+		xmlhttp.onerror = function(error){
+			console.log("Se produjo un error")
+		}
+        xmlhttp.send(JSON.stringify({username:user, password: pass
+        }));
+	}
+	</script>
+</html>
