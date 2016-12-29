@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 		<title>Envio de datos del paciente</title>
-		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<link rel="stylesheet" type="text/css" href="../../css/style.css">
 	</head>
 	<body onload="startDB(); ">
 		<header>
@@ -61,12 +61,12 @@
         var errorServidor;
         var errorFlag;
         var errorSrv;
-        var work = new Worker('../js/worker.js');
+        var work = new Worker('../../js/worker.js');
         var indexedDB = window.indexedDB || window.mozIndexedDB || window.webkitIndexedDB || window.msIndexedDB;
 
 
         //Llamada a workerPulso para extraer la frecuencia
-				worker_pulso = new Worker ('../js/workerPulso.js');
+				worker_pulso = new Worker ('../../js/workerPulso.js');
 				worker_pulso.onmessage = function(event){
 				 pulse = event.data;
 
