@@ -13,6 +13,7 @@
 	<script type="text/javascript" charset="utf8" src="//cdn.datatables.net/1.10.13/js/jquery.dataTables.js"></script>
 	<link data-require="bootstrap@3.2.0" data-semver="3.2.0" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.css" />
     <script data-require="bootstrap@3.2.0" data-semver="3.2.0" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.js"></script>
+	  <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCmkB9Rb_I9-YgOvChPzwG8RjSspLUI7Sc"></script>
   </head>
 
   <body data-ng-app="spaApp">
@@ -35,8 +36,51 @@
   </body>
 
 	<script type="application/javascript">
+
 		$(document).ready(function() {
-			$('#example').DataTable();
+			$('#example').DataTable({
+			});
 		} );
+	</script>
+	<script type="text/javascript">
+		var lat =21.4972682,lon=-104.8833835;
+		console.log("Cargando mapa...");
+
+		//NAMESPACE --> google.maps.ALGO
+					function initialize () {
+
+
+		  var divMapa = document.getElementById('mapa');
+		  navigator.geolocation.getCurrentPosition( fn_ok, fn_mal);
+		  function fn_mal(){}
+		  function fn_ok(res){
+			 lat = res.coords.latitude;
+			  lon = res.coords.longitude;
+			console.log(lat + "  "+lon);
+
+
+
+			console.log("Estableciendo mapa...");
+
+
+		var gLatLon = new google.maps.LatLng(lat, lon);
+		var objConfig = {
+		  zoom: 17,
+		  center: gLatLon
+		};
+		//exports= module.exports = new google.maps.LatLng(lat,lon);
+
+		var gMapa = new google.maps.Map(divMapa, objConfig);
+		var objConfigMarker = {
+		  position: gLatLon,
+		  map: gMapa,
+		  title: "Cliente"
+		};
+		var gMarker = new google.maps.Marker(objConfigMarker);
+		  }
+					}
+
+		google.maps.event.addDomListener(window, 'load', initialize);
+
 	</script>
 </html>

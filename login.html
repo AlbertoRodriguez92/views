@@ -1,5 +1,6 @@
 <html>
 	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<link type="text/css" href="css/style.css" rel="stylesheet">
 	</head>
 	<body>
@@ -49,9 +50,26 @@
 						document.getElementById("demo").innerHTML=rol;
 						console.log(rol);
 						if(rol==7){
-							location.href="/views/index.html";
+							location.href="/views/templates/paciente/paciente-datasend.html";
 						}
-
+						if(rol==6){
+							location.href="/views/templates/secretaria/secretaria_ini.html";
+						}
+						if(rol==5){
+							location.href="/views/templates/ambulancia";
+						}
+						if(rol==4){
+							location.href="/views/templates/paramedico";
+						}
+						if(rol==3){
+							location.href="/views/templates/doctor/";
+						}
+						if(rol==2){
+							location.href="/views/templates/admin";
+						}
+						if(rol==1){
+							location.href="/views/templates/sysAdmin";
+						}
 					}
 				}
         		xhr.send(JSON.stringify({nombre:name
