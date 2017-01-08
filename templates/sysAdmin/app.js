@@ -7,13 +7,9 @@ angular.module('spaApp', ['ngRoute'])
             controller: 'InicioCtrl',
 
         })
-        .when('/perfil', {
-            templateUrl: 'perfil.html',
-            controller: 'PerfilCtrl',
-        })
-        .when('/emergencias', {
-            templateUrl: 'emergencias.html',
-            controller: 'EmergenciasCtrl',
+        .when('/registro', {
+            templateUrl: 'register.html',
+            controller: 'RegistroCtrl',
         })
         .otherwise({
             redirectTo: '/'

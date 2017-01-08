@@ -10,5 +10,5 @@ angular.module('spaApp')
 
 angular.module('spaApp')
   .controller('EmergenciasCtrl', function ($scope) {
-    $scope.message = "Emergencias.";
+    $scope.message = "Emergencias atendidas.";
   });
