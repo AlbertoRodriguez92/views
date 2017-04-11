@@ -5,12 +5,12 @@
 	</head>
 	<body>
 		<header>
-            <nav id="menu">
-                <ul>
-                    <li><a href="index.html">Regresar</a></li>
-                </ul>
-            </nav>
-        </header>
+      <nav id="menu">
+        <ul>
+          <li><a href="index.html">Regresar</a></li>
+        </ul>
+      </nav>
+    </header>
 		<div class="contenido">
 		<div id="form-login">
 			<section class="contenido">
@@ -25,66 +25,65 @@
 		<div id="demo"></div>
 	</body>
 	<script type="application/javascript">
-	var name, rol;
-	function enviaDatos(){
+    var name, rol;
+    function enviaDatos(){
 
-		var user = document.getElementById("usuario").value;
-		var pass = document.getElementById("contrasena").value;
+      var user = document.getElementById("usuario").value;
+      var pass = document.getElementById("contrasena").value;
 
-		var xmlhttp = new XMLHttpRequest();
-		xmlhttp.onreadystatechange = function(){
+      var xmlhttp = new XMLHttpRequest();
+      xmlhttp.onreadystatechange = function(){
+              if(this.readyState == 4 && this.status==200){
+          name = xmlhttp.responseText;
+                  document.getElementById("demo").innerHTML = name;
+
+          var xhr = new XMLHttpRequest();
+
+          xhr.open("GET", "http://localhost:8080/rol/"+name);
+              xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+          xhr.onerror = function(error){
+            console.log("Se produjo un error")
+          }
+          xhr.onreadystatechange = function(){
             if(this.readyState == 4 && this.status==200){
-				name = xmlhttp.responseText;
-                document.getElementById("demo").innerHTML = name;
-
-				var xhr = new XMLHttpRequest();
-
-				xhr.open("GET", "http://localhost:8080/rol/"+name);
-        		xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
-				xhr.onerror = function(error){
-					console.log("Se produjo un error")
-				}
-				xhr.onreadystatechange = function(){
-					if(this.readyState == 4 && this.status==200){
-						rol = xhr.responseText;
-						document.getElementById("demo").innerHTML=rol;
-						console.log(rol);
-						if(rol==7){
-							location.href="/views/templates/paciente/paciente-datasend.html";
-						}
-						if(rol==6){
-							location.href="/views/templates/secretaria/";
-						}
-						if(rol==5){
-							location.href="/views/templates/ambulancia/";
-						}
-						if(rol==4){
-							location.href="/views/templates/paramedico/";
-						}
-						if(rol==3){
-							location.href="/views/templates/doctor/";
-						}
-						if(rol==2){
-							location.href="/views/templates/admin/";
-						}
-						if(rol==1){
-							location.href="/views/templates/sysAdmin/";
-						}
-					}
-				}
-        		xhr.send(JSON.stringify({nombre:name
-        		}));
+              rol = xhr.responseText;
+              document.getElementById("demo").innerHTML=rol;
+              console.log(rol);
+              if(rol==7){
+                location.href="/views/templates/paciente/paciente-datasend.html";
+              }
+              if(rol==6){
+                location.href="/views/templates/secretaria/";
+              }
+              if(rol==5){
+                location.href="/views/templates/ambulancia/";
+              }
+              if(rol==4){
+                location.href="/views/templates/paramedico/";
+              }
+              if(rol==3){
+                location.href="/views/templates/doctor/";
+              }
+              if(rol==2){
+                location.href="/views/templates/admin/";
+              }
+              if(rol==1){
+                location.href="/views/templates/sysAdmin/";
+              }
             }
-        }
-        xmlhttp.open("POST", "http://localhost:8080/login");
-        xmlhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
-		xmlhttp.onerror = function(error){
-			console.log("Se produjo un error")
-		}
-        xmlhttp.send(JSON.stringify({username:user, password: pass
-        }));
+          }
+              xhr.send(JSON.stringify({nombre:name
+              }));
+              }
+          }
+          xmlhttp.open("POST", "http://localhost:8080/login");
+          xmlhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+      xmlhttp.onerror = function(error){
+        console.log("Se produjo un error")
+      }
+          xmlhttp.send(JSON.stringify({username:user, password: pass
+          }));
 
-	}
-
+    }
 	</script>
 </html>
